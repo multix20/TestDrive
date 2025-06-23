@@ -1,4 +1,3 @@
-import { ExternalLinkIcon } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 
 const App = () => {
@@ -337,7 +336,7 @@ const App = () => {
   if (!testStarted) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-5">
-        <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <div className="max-w-4xl mx-auto bg-white text-gray-800 rounded-2xl shadow-2xl overflow-hidden">
           <div className="bg-gradient-to-r from-blue-800 to-blue-600 text-white p-8 text-center">
             <h1 className="text-4xl font-bold mb-3 text-shadow">🚗 Test Licencia A5 Chile</h1>
             <p className="text-xl opacity-90">Simulador del examen teórico oficial - CONASET</p>
@@ -380,7 +379,7 @@ const App = () => {
     const results = calculateResults();
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-5">
-        <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <div className="max-w-4xl mx-auto bg-white text-gray-800 rounded-2xl shadow-2xl overflow-hidden">
           <div className="bg-gradient-to-r from-blue-800 to-blue-600 text-white p-8 text-center">
             <h1 className="text-4xl font-bold mb-3">🚗 Test Licencia A5 Chile</h1>
             <p className="text-xl opacity-90">Resultados del Examen</p>
@@ -432,7 +431,7 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-5">
-      <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+      <div className="max-w-4xl mx-auto bg-white text-gray-800 rounded-2xl shadow-2xl overflow-hidden">
         <div className="bg-gradient-to-r from-blue-800 to-blue-600 text-white p-8 text-center">
           <h1 className="text-4xl font-bold mb-3">🚗 Test Licencia A5 Chile</h1>
           <p className="text-xl opacity-90">Simulador del examen teórico oficial - CONASET</p>
@@ -467,7 +466,7 @@ const App = () => {
             {currentQuestion?.question}
           </div>
           
-          <div className="space-y-4 mb-8">
+          <div className="space-y-4 mb-8 text-gray-800">
             {currentQuestion?.options.map((option, index) => {
               const isSelected = userAnswers[currentQuestionIndex] === index;
               const isCorrect = index === currentQuestion.correct;
@@ -478,7 +477,7 @@ const App = () => {
                 <div
                   key={index}
                   onClick={() => selectOption(index)}
-                  className={`p-5 rounded-xl border-2 cursor-pointer transition-all duration-300 hover:scale-102 ${
+                  className={`p-5 rounded-xl border-2 cursor-pointer transition-all duration-300 hover:scale-105 ${
                     showAnswer && isCorrect
                       ? 'bg-green-100 border-green-500 text-green-800'
                       : showAnswer && isIncorrect
